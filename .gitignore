@@ -1,3 +1,6 @@
+Dockerfile
+run.sh
+
 # Compiled Object files
 *.slo
 *.lo
@@ -74,4 +77,3 @@ node_modules/
 
 # vscode
 .vscode/
-/.vs
