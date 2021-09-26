@@ -318,7 +318,7 @@ void ApiServer::handle_accept(std::shared_ptr<ApiConnection> session, boost::sys
             }
         });
         m_sessions.push_back(session);
-        cnote << "New API session from " << session->socket().remote_endpoint();
+        //cnote << "New API session from " << session->socket().remote_endpoint();
         session->start();
     }
     else
@@ -446,7 +446,7 @@ void ApiConnection::processRequest(Json::Value& jRequest, Json::Value& jResponse
     }
 
     assert(m_is_authenticated);
-    cnote << "API : Method " << _method << " requested";
+    //cnote << "API : Method " << _method << " requested";
     if (_method == "miner_getstat1")
     {
         jResponse["result"] = getMinerStat1();
